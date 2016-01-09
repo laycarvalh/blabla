@@ -1,0 +1,13 @@
+package cc.labiras.serialRxTx;
+
+public class Main extends SerialComm{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

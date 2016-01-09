@@ -1,0 +1,21 @@
+package cc.labiras.serialRxTx;
+
+public class Main extends SerialComm{
+
+	
+	public static void main(String[] args) {
+		SerialCommRW leitura = new SerialCommRW("COM1", 9600, 0);
+		leitura.HabilitarLeitura();
+		leitura.ObterIdDaPorta();
+		leitura.AbrirPorta();
+		leitura.LerDados();
+		//Controle de tempo da leitura aberta na serial
+		try {
+		Thread.sleep(1000);
+		} catch (InterruptedException ex) {
+		System.out.println("Erro na Thread: " + ex);
+		}
+		leitura.FecharCom();
+	}
+
+}

@@ -1,0 +1,44 @@
+package cc.labiras.serialRxTx;
+
+public class Main extends SerialComm {
+
+	public static void main(String[] args) {
+		SerialCommRW leitura = new SerialCommRW("COM31", 9600);
+		leitura.habilitarLeitura();
+		leitura.obterIdDaPorta();
+		leitura.abrirPorta();
+		leitura.lerDados();
+		// Controle de tempo da leitura aberta na serial
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException ex) {
+			System.out.println("Erro na Thread: " + ex);
+		}
+//		System.out.println("Valor recebido1: " + leitura.getValorRecebido());
+////		leitura.lerDados();
+//		// Controle de tempo da leitura aberta na serial
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException ex) {
+//			System.out.println("Erro na Thread: " + ex);
+//		}
+//		System.out.println("Valor recebido2: " + leitura.getValorRecebido());
+////		leitura.lerDados();
+//		// Controle de tempo da leitura aberta na serial
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException ex) {
+//			System.out.println("Erro na Thread: " + ex);
+//		}
+//		System.out.println("Valor recebido3: " + leitura.getValorRecebido().toString());
+		leitura.FecharCom();
+		
+//		SerialCommRW serialEscrita = new SerialCommRW("COM31", 9600);
+//		serialEscrita.habilitarEscrita();
+//		serialEscrita.obterIdDaPorta();
+//		serialEscrita.abrirPorta();
+//		serialEscrita.enviarUmaString('1');
+//		serialEscrita.FecharCom();
+	}
+
+}

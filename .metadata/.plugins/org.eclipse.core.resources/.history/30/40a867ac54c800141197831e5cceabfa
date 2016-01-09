@@ -1,0 +1,18 @@
+package cc.labiras.serial;
+
+public class Main extends SerialCom {
+	private static String PORTA = "COM31";
+	private static int BAUD = 9600;
+	
+	public static void main(String[] args) {
+		SerialComLeitura escrever = new SerialComLeitura(PORTA, BAUD);
+//		escrever.iniciarConexao();
+		escrever.escrever("2");
+//		escrever.enviarUmaString("2");
+//		escrever.deLay(500);
+//		escrever.fecharCom();
+		Character c = new Character('2');
+		
+	}
+
+}

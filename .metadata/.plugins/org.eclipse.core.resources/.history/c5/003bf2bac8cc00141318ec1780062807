@@ -1,0 +1,17 @@
+package cc.labiras.teste;
+
+import cc.labiras.serial.SerialRxTx;
+import gnu.io.CommPortIdentifier;;
+
+public class Teste {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SerialRxTx teste = new SerialRxTx("COM33", 9600);
+		teste.iniciarSerial();
+
+	}
+
+}

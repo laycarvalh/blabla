@@ -1,0 +1,15 @@
+package cc.labiras.serial;
+
+public class Main extends SerialCom {
+	private static String PORTA = "COM31";
+	private static int BAUD = 9600;
+	
+	public static void main(String[] args) {
+		System.out.println("Caracter :\r*");
+		char p = '0';
+		SerialComLeitura com = new SerialComLeitura(PORTA, BAUD);
+		com.escrever(p); //Passar o número da porta que quer ativar
+	
+	}
+
+}

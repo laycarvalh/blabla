@@ -1,0 +1,44 @@
+package cc.labiras.serialRxTx;
+
+import gnu.io.CommPortIdentifier;
+import gnu.io.SerialPort;
+import gnu.io.SerialPortEvent;
+import gnu.io.SerialPortEventListener;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class SerialCommRW implements Runnable, SerialPortEventListener {
+	public String Dadoslidos;
+	public int nodeBytes;
+	private int baudrate;
+	private int timeout;
+	private CommPortIdentifier cp;
+	private SerialPort porta;
+	private OutputStream saida;
+	private InputStream entrada;
+	private Thread threadLeitura;
+	private boolean IDPortaOK;
+	private boolean PortaOK;
+	private boolean Leitura;
+	private boolean Escrita;
+	private String Porta;
+	protected String peso; // Dados lidos que interessa
+
+	public void setPeso(String peso) {
+		this.peso = peso;
+	}
+
+	public String getPeso() {
+		return peso;
+	}
+
+	public SerialComLeitura(String porta, int baudrate, int t) {
+		this.Porta = porta;
+		this.baudrate = baudrate;
+		this.timeout = t;
+	}
+}

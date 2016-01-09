@@ -1,0 +1,18 @@
+package cc.labiras.serialRxTx;
+
+import gnu.io.CommPortIdentifier;
+import java.util.Enumeration;
+
+
+public class SerialComm {
+	protected String[] portas;
+	protected Enumeration listaDePortas;
+	
+	public SerialComm(){
+		listaDePortas = CommPortIdentifier.getPortIdentifiers();
+	}
+	
+	public String[] ObterPortas() {
+		return portas;
+	}
+}

@@ -1,0 +1,16 @@
+package cc.labiras.teste;
+
+import cc.labiras.serial.SerialRxTx;
+
+public class Teste {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SerialRxTx teste = new SerialRxTx("COM32", 9600);
+		teste.iniciarSerial();
+
+	}
+
+}

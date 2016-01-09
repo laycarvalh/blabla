@@ -1,0 +1,20 @@
+package cc.labiras.serial;
+
+public class Main extends SerialCom {
+	private static String PORTA = "COM31";
+	private static int BAUD = 9600;
+	
+	public static void main(String[] args) {
+
+		SerialComLeitura leitura = new SerialComLeitura("COM31", 9600);
+//		leitura.ler(2000);
+		leitura.habilitarEscrita();
+		leitura.obterIdDaPorta();
+		leitura.abrirPorta();
+		leitura.enviarUmaString("13");
+		leitura.deLay(1000);
+		leitura.enviarUmaString("13");
+		leitura.fecharCom();
+	}
+
+}

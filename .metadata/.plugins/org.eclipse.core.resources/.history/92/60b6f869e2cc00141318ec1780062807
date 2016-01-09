@@ -1,0 +1,13 @@
+package cc.labiras.teste;
+
+import cc.labiras.serial.SerialRxTx;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		SerialRxTx a = new SerialRxTx("COM33", 9600);
+		while(!a.iniciarSerial()){}
+		a.enviarDados("Layse");
+	}
+
+}
